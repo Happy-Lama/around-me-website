@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/style.css') }}">
+    <title>Document</title>
+</head>
+<body>
+    <nav>
+        <input type="search" name="search" id="search" placeholder="Search for places...">
+        <input type="submit" value="Search" id="submit_button">
+        <a href="#">Featured</a>
+    </nav>
+    <main>
+        <div id="categories_container">
+            <div class="category"><span> &#x1f6cc;</span>Accomodation</div>
+            <div class="category"><span>&#x1f374;</span>Bar and Restaurant</div>
+            <div class="category"><span>&#127973;</span> Healthcare centres</div>
+            <div class="category"><span>&#128722;</span> Supermarket</div>
+        </div>
+        <div id="places">
+            <div id="filter_settings"></div>
+            <div id="placecard_container">
+                <div class="placecard"></div>
+                <div class="placecard"></div>
+                <div class="placecard"></div>
+                <div class="placecard"></div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
