@@ -15,20 +15,32 @@
     </nav>
     <main>
         <div id="categories_container">
-            <div class="category"><span> &#x1f6cc;</span>Accomodation</div>
-            <div class="category"><span>&#x1f374;</span>Bar and Restaurant</div>
-            <div class="category"><span>&#127973;</span> Healthcare centres</div>
-            <div class="category"><span>&#128722;</span> Supermarket</div>
+            <div class="category" onclick="find_places('Accomodation')"><span> &#x1f6cc;</span>Accomodation</div>
+            <div class="category" onclick="find_places('Bar and Restaurant')"><span>&#x1f374;</span>Bar and Restaurant</div>
+            <div class="category" onclick="find_places('Healthcare Centres')"><span>&#127973;</span> Healthcare centres</div>
+            <div class="category" onclick="find_places('Supermarket')"><span>&#128722;</span> Supermarket</div>
         </div>
         <div id="places">
-            <div id="filter_settings"></div>
+            <div id="filter_settings">
+                Filter
+                <button>
+                    Filter
+                </button>
+            </div>
             <div id="placecard_container">
-                <div class="placecard"></div>
-                <div class="placecard"></div>
-                <div class="placecard"></div>
-                <div class="placecard"></div>
+                {% for placecard in placecards %}
+                <div class="placecard" onclick="place(this)">
+                    <img src="{{ placecard['img_src'] }}" alt="Place Picture">
+                    <h4>{{ placecard['name'] }}</h4><br />
+                    <p> {{ placecard['location'] }} </p>
+                    How far: {{ placecard['distance_from_current_location']}} meters
+                    Rating: {{ placecard['rating']}} <br />
+                    Description: {{ placecard['description'] }} 
+                </div>
+                {% endfor %}
             </div>
         </div>
     </main>
+    <script src="{{ url_for('static',filename='js/script.js') }}"></script>
 </body>
 </html>

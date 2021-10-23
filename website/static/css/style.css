@@ -10,13 +10,14 @@ body{
 }
 nav{
     background-color: rgb(39,116,243);
-    padding: 0.7em;
+    padding: 0.3em;
     flex-basis: 100%;
     display: flex;
     justify-content: center;
     box-shadow: 0px 0px 5px;
 }
 nav a{
+    padding: 0px;
     padding-left: 5%;
     text-decoration: none;
     color: white;
@@ -44,7 +45,7 @@ main{
 }
 
 .category{
-    border: 2px solid rgb(127, 173, 247);
+    /* border: 2px solid rgb(127, 173, 247); */
     border-radius: 3px;
     box-shadow: 1px 1px 4px;
     flex-basis: 100%;
@@ -58,6 +59,9 @@ main{
     padding: 0.3em;
     color: rgb(127, 173, 247);
 }
+.category:hover{
+    cursor: pointer;
+}
 
 span{
     font-size: 5em;
@@ -67,17 +71,37 @@ span{
     flex-basis: 100%;
     background-color: rgb(39,116,243);
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    /* display: none; */
 }
+
 #places #filter_settings{
     background-color: rgb(39,116,243);
     padding: 0.7em;
     flex-basis: 100%;   
 }
-
-
-
+#placecard_container{
+    flex-basis: 100%;
+}
+.placecard{
+    border: 1px solid white;
+    flex-basis: 100%;
+    cursor: pointer;
+    padding: 0.3em;
+}
+.placecard img{
+    height: 75px;
+    width: 100%;
+}
 @media  screen and (min-width:720px) {
     .category{
         flex-basis: 40%;
+    }
+    #places{
+        display: flex;
+    }
+    .placecard{
+        flex-basis: 45%;
     }
 }
