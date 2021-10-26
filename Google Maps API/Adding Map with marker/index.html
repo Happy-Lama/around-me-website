@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Add Map</title>
+</head>
+<body>
+    <h3>My Google Maps Demo</h3>
+    <!-- the iv element for the map -->
+    <div id="map"></div>
+    <!-- Link to the script file containing initMap -->
+    <script src="./script.js"></script>
+    <!-- Async script executes immediately and msut be afterr any DOM elements used in callback -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap&libraries=&v=weekly"></script>
+    <!-- callback parameter takes the function name of the function to be executed
+    when the API has finished loading -->
+</body>
+</html>
